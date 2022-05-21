@@ -11,6 +11,13 @@
 		B3FBB04328356C8000DB85B8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBB04228356C8000DB85B8 /* ContentView.swift */; };
 		B3FBB04528356C8200DB85B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3FBB04428356C8200DB85B8 /* Assets.xcassets */; };
 		B3FBB04828356C8200DB85B8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3FBB04728356C8200DB85B8 /* Preview Assets.xcassets */; };
+		B3FBB05F2837212A00DB85B8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBB05E2837212A00DB85B8 /* HomeView.swift */; };
+		B3FBB0612837216800DB85B8 /* RoutinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBB0602837216800DB85B8 /* RoutinesView.swift */; };
+		B3FBB0632837217600DB85B8 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBB0622837217600DB85B8 /* CreateView.swift */; };
+		B3FBB0652837218700DB85B8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBB0642837218700DB85B8 /* ProfileView.swift */; };
+		B3FBB0672837219400DB85B8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBB0662837219400DB85B8 /* SettingsView.swift */; };
+		B3FBB0692837BD6400DB85B8 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBB0682837BD6400DB85B8 /* TabBar.swift */; };
+		B3FBB06B2837D25D00DB85B8 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBB06A2837D25D00DB85B8 /* ProductModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,13 @@
 		B3FBB04228356C8000DB85B8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B3FBB04428356C8200DB85B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3FBB04728356C8200DB85B8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B3FBB05E2837212A00DB85B8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B3FBB0602837216800DB85B8 /* RoutinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinesView.swift; sourceTree = "<group>"; };
+		B3FBB0622837217600DB85B8 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		B3FBB0642837218700DB85B8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		B3FBB0662837219400DB85B8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B3FBB0682837BD6400DB85B8 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		B3FBB06A2837D25D00DB85B8 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +66,9 @@
 			isa = PBXGroup;
 			children = (
 				B3FBB04028356C8000DB85B8 /* MakeupRoutineApp.swift */,
-				B3FBB04228356C8000DB85B8 /* ContentView.swift */,
+				B3FBB04F2837203200DB85B8 /* ViewModels */,
+				B3FBB04E2837202A00DB85B8 /* Views */,
+				B3FBB0502837203F00DB85B8 /* Models */,
 				B3FBB04428356C8200DB85B8 /* Assets.xcassets */,
 				B3FBB04628356C8200DB85B8 /* Preview Content */,
 			);
@@ -65,6 +81,59 @@
 				B3FBB04728356C8200DB85B8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B3FBB04E2837202A00DB85B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3FBB0532837207400DB85B8 /* Components */,
+				B3FBB0522837206C00DB85B8 /* Detail */,
+				B3FBB0512837205200DB85B8 /* Main */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B3FBB04F2837203200DB85B8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B3FBB0502837203F00DB85B8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B3FBB06A2837D25D00DB85B8 /* ProductModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B3FBB0512837205200DB85B8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B3FBB04228356C8000DB85B8 /* ContentView.swift */,
+				B3FBB0682837BD6400DB85B8 /* TabBar.swift */,
+				B3FBB05E2837212A00DB85B8 /* HomeView.swift */,
+				B3FBB0602837216800DB85B8 /* RoutinesView.swift */,
+				B3FBB0622837217600DB85B8 /* CreateView.swift */,
+				B3FBB0642837218700DB85B8 /* ProfileView.swift */,
+				B3FBB0662837219400DB85B8 /* SettingsView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B3FBB0522837206C00DB85B8 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		B3FBB0532837207400DB85B8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +206,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3FBB0672837219400DB85B8 /* SettingsView.swift in Sources */,
+				B3FBB05F2837212A00DB85B8 /* HomeView.swift in Sources */,
 				B3FBB04328356C8000DB85B8 /* ContentView.swift in Sources */,
+				B3FBB0692837BD6400DB85B8 /* TabBar.swift in Sources */,
+				B3FBB06B2837D25D00DB85B8 /* ProductModel.swift in Sources */,
 				B3FBB04128356C8000DB85B8 /* MakeupRoutineApp.swift in Sources */,
+				B3FBB0632837217600DB85B8 /* CreateView.swift in Sources */,
+				B3FBB0652837218700DB85B8 /* ProfileView.swift in Sources */,
+				B3FBB0612837216800DB85B8 /* RoutinesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
