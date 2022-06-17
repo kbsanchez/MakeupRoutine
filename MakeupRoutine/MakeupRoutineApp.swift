@@ -2,8 +2,6 @@
 //  MakeupRoutineApp.swift
 //  MakeupRoutine
 //
-//  Created by Keylin Sanchez on 5/18/22.
-//
 
 import SwiftUI
 import FirebaseCore
@@ -19,6 +17,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct MakeupRoutineApp: App {
+    @StateObject var productsViewModel = ProductsViewModel()
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
@@ -26,6 +25,7 @@ struct MakeupRoutineApp: App {
             let viewModel = AppViewModel()
             ContentView()
                 .environmentObject(viewModel)
+                .environmentObject(productsViewModel)
         }
     }
 }

@@ -2,8 +2,6 @@
 //  ProductCard.swift
 //  MakeupRoutine
 //
-//  Created by Keylin Sanchez on 5/27/22.
-//
 
 import SwiftUI
 

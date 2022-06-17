@@ -1,11 +1,11 @@
 //
-//  ProductList.swift
+//  ProductSelectList.swift
 //  MakeupRoutine
 //
 
 import SwiftUI
 
-struct ProductList: View {
+struct ProductSelectList: View {
     var products: [Product]
     
     var body: some View {
@@ -21,7 +21,7 @@ struct ProductList: View {
             
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
                 ForEach(products) { product in
-                    NavigationLink(destination: ProductView(product: product)) {
+                    NavigationLink(destination: ProductSelectView(product: product)) {
                         ProductCard(product: product)
                     }
                 }
@@ -32,10 +32,10 @@ struct ProductList: View {
     }
 }
 
-struct ProductList_Previews: PreviewProvider {
+struct ProductSelectList_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView {
-            ProductList(products: Product.all)
+            ProductSelectList(products: Product.all)
         }
     }
 }

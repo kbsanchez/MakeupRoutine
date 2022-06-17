@@ -2,18 +2,26 @@
 //  CreateView.swift
 //  MakeupRoutine
 //
-//  Created by Keylin Sanchez on 5/19/22.
-//
 
 import SwiftUI
 
 struct CreateView: View {
+    @State private var newRoutine = false
+    
     var body: some View {
         NavigationView {
-            Text("Create")
-                .navigationTitle("Create")
+            Button(action: {
+                newRoutine.toggle()
+            }, label: {
+                Text("Create a new routine")
+                    .foregroundColor(.pink)
+            })
         }
         .navigationViewStyle(.stack)
+        .navigationBarTitleDisplayMode(.inline)
+        .sheet(isPresented: $newRoutine) {
+            AddRoutineView()
+        }
     }
 }
 

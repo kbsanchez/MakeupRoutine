@@ -6,31 +6,43 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @State private var newProduct = false
+    
     var body: some View {
-        NavigationView {
-            //ScrollView {
+        VStack {
+            NavigationView {
                 List {
-                    ForEach(Category.allCases) { category in
-                        NavigationLink {
-                            CategoryView(category: category)
-                        } label: {
-                            Text(category.rawValue + "s")
+                    Section(header: Text("Product Categories")) {
+                        ForEach(Category.allCases) { category in
+                            NavigationLink {
+                                CategoryView(category: category)
+                            } label: {
+                                Text(category.rawValue)
+                            }
                         }
                     }
-                }
-            //}
-            .navigationTitle("Product Categories")
+                }.listStyle(InsetGroupedListStyle())
+                
+                .navigationTitle("Products")
+                .toolbar(content: {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            newProduct.toggle()
+                        }, label: {
+                            Label("New product", systemImage: "plus.circle")
+                                .foregroundColor(.pink)
+                        })
+                    }
+                })
+                
+            }
+            .navigationViewStyle(.stack)
+            .navigationBarTitleDisplayMode(.inline)
+            .sheet(isPresented: $newProduct) {
+                AddProductView()
+            }
         }
-        .navigationViewStyle(.stack)
-        
-        
-//        NavigationView {
-//            ScrollView {
-//                ProductList(products: Product.all)
-//            }
-//            .navigationTitle("My Products")
-//        }
-//        .navigationViewStyle(.stack)
     }
 }
 

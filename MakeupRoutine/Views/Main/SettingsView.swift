@@ -8,6 +8,7 @@ import SwiftUI
 struct SettingsView: View {
     
     @EnvironmentObject var viewModel: AppViewModel
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationView {
@@ -18,12 +19,24 @@ struct SettingsView: View {
                     .foregroundColor(Color.white)
                     .frame(width: 200, height: 50)
                     .cornerRadius(8)
-                    .background(Color.indigo)
+                    .background(Color.pink)
                     .padding()
             })
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Label("Cancel", systemImage: "xmark")
+                            .foregroundColor(.pink)
+                    }
+                }
+            })
                 .navigationTitle("Settings")
+                .navigationBarTitleDisplayMode(.inline)
         }
         .navigationViewStyle(.stack)
+        
     }
 }
 

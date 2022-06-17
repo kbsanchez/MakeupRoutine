@@ -1,18 +1,16 @@
 //
-//  ProductView.swift
+//  ProductSelectView.swift
 //  MakeupRoutine
 //
 
 import SwiftUI
 
-struct ProductView: View {
+struct ProductSelectView: View {
     var product: Product
     
     @State private var navigateToCategory = false
-    @State private var addedToFavorites = false
     
     @EnvironmentObject var productsVM: ProductsViewModel
-    @EnvironmentObject var favProducts: Favorites
     
     var body: some View {
         ScrollView {
@@ -42,19 +40,10 @@ struct ProductView: View {
                 .toolbar(content: {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {
-                            if favProducts.contains(product)  {
-                                favProducts.remove(product)
-                            } else {
-                                favProducts.add(product)
-                            }
+                            
                         }, label: {
-                            if favProducts.contains(product)  {
-                                Label("Remove from Favorites", systemImage: "star.fill")
-                                    .foregroundColor(.pink)
-                            } else {
-                                Label("Add to Favorites", systemImage: "star")
-                                    .foregroundColor(.pink)
-                            }
+                            Label("Add to routine", systemImage: "plus.circle.fill")
+                                .foregroundColor(.green)
                         })
                     }
                 })
@@ -118,11 +107,11 @@ struct ProductView: View {
                         }
                     }
                     HStack {
-                        Button(role: .destructive, action: {
-                                removeProduct()
+                        Button(action: {
+                                
                             }, label: {
-                                Label("Delete Product", systemImage: "trash")
-                                    .foregroundColor(.pink)
+                                Label("Add Product to Routine", systemImage: "plus.circle.fill")
+                                    .foregroundColor(.green)
                                     .padding(.bottom)
                             })
                     }
@@ -135,15 +124,8 @@ struct ProductView: View {
     }
 }
 
-struct ProductView_Previews: PreviewProvider {
+struct ProductSelectView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductView(product: Product.all[0])
-    }
-}
-
-extension ProductView {
-    private func removeProduct() {
-        let product = product
-        productsVM.deleteProduct(product: product)
+        ProductSelectView(product: Product.all[0])
     }
 }

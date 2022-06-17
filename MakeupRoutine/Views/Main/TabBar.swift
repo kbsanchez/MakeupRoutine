@@ -23,22 +23,24 @@ struct TabBar: View {
                     Label("Create", systemImage: "plus")
                 }
             
+            FeedView()
+                .tabItem {
+                    Label("Feed", systemImage: "sparkles")
+                }
+            
             ProfileView()
                 .tabItem {
                     Label("Profile", systemImage: "person.crop.circle")
                 }
             
-            SettingsView()
-                .tabItem {
-                    Label("Settings", systemImage: "gear")
-                }
-            
         }
+        .accentColor(.pink)
     }
 }
 
 struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
         TabBar()
+            .environmentObject(ProductsViewModel())
     }
 }

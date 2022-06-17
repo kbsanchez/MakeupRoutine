@@ -19,6 +19,11 @@ struct SignUpView: View {
                     .scaledToFit()
                     .frame(width: 150, height: 150)
                 VStack {
+                    TextField("Full Name", text: $name)
+                        .disableAutocorrection(true)
+                        .padding()
+                        .background(Color(.secondarySystemBackground))
+                    
                     TextField("Email Address", text: $email)
                         .disableAutocorrection(true)
                         .autocapitalization(.none)

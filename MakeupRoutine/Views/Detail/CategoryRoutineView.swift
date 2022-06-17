@@ -1,11 +1,13 @@
 //
-//  CategoryView.swift
+//  CategoryRoutineView.swift
 //  MakeupRoutine
+//
+//  Created by Keylin Sanchez on 6/17/22.
 //
 
 import SwiftUI
 
-struct CategoryView: View {
+struct CategoryRoutineView: View {
     @EnvironmentObject var productsVM: ProductsViewModel
     
     var category: Category
@@ -16,18 +18,13 @@ struct CategoryView: View {
     
     var body: some View {
         ScrollView {
-            ProductList(products: products)
+            ProductSelectList(products: products)
         }
-        .toolbar(content: {
-            EditButton()
-                .foregroundColor(.pink)
-            
-        })
         .navigationTitle(category.rawValue)
     }
 }
 
-struct CategoryView_Previews: PreviewProvider {
+struct CategoryRoutineView_Previews: PreviewProvider {
     static var previews: some View {
         CategoryView(category: Category.blush)
             .environmentObject(ProductsViewModel())

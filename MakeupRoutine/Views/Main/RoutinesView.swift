@@ -6,12 +6,20 @@
 import SwiftUI
 
 struct RoutinesView: View {
+    
     var body: some View {
-        NavigationView {
-            Text("Routines")
+        VStack {
+            NavigationView {
+                    List {
+                        Section(header: Text("My Routines"), footer: Text("Tap 'Create' to add a new routine")) {
+                            Text("No saved routines")
+                        }
+                    }.listStyle(InsetGroupedListStyle())
                 .navigationTitle("Routines")
+            }
+            .navigationViewStyle(.stack)
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationViewStyle(.stack)
     }
 }
 
