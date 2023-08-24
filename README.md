@@ -4,22 +4,25 @@ The Makeup Routine iOS App is designed to enhance your makeup experience by offe
 
 ## Table of Contents
 
-- [Features](#features)
+- [Features Under Development](#features-under-development)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
 - [Contact](#contact)
 
-## Features
+## Features Under Development
 
 - **Product Management:** Create, read, update, and delete your makeup products to keep track of your collection.
 
-- **Expiration Notifications:** Receive notifications when your products have reached their expiration date, ensuring the freshness of your makeup items.
+    - ***Expiration Notifications:*** Receive notifications when your products have reached their expiration date, ensuring the freshness of your makeup items.
+    - ***Favorites and Wishlist:*** Maintain a collection of your favorite products and wishlisted products for easier access.
 
 - **Makeup Routine Creation:** Build and manage your makeup routines using the products you've uploaded to the app.
+  
+    - ***Templates:*** Create a new routine from a template. Customize and save templates to use when creating routines.
 
 - **Posts Creation:** Create posts featuring completed makeup looks along with the routine you used.
 
-- **Explore Other Users' Posts:** View posts uploaded by other users and generate a routine using your own product catalogue that closely matches their used routine.
+    - ***Explore Other Users' Posts:*** View posts uploaded by other users and generate a routine using your own product catalogue that closely matches their used routine.
 
 - **User Profile:** Maintain a user profile with basic information, view all your posts, and save posts from other users. Follow other users to stay updated on their posts.
 
